@@ -19,8 +19,8 @@ package cosmos
 import (
 	"bytes"
 	"fmt"
+
 	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/store/rootmulti"
 	"github.com/ethereum/go-ethereum/contracts/native"
 	scom "github.com/ethereum/go-ethereum/contracts/native/cross_chain_manager/common"
 	"github.com/ethereum/go-ethereum/contracts/native/header_sync/cosmos"
@@ -109,13 +109,13 @@ func (this *CosmosHandler) MakeDepositProposal(service *native.NativeContract) (
 		return nil, fmt.Errorf("Cosmos MakeDepositProposal, unmarshal proof err: %v", err)
 	}
 	if len(proofValue.Kp) != 0 {
-		prt := rootmulti.DefaultProofRuntime()
+		prt := ProofRuntime()
 		err = prt.VerifyValue(&proof, myHeader.Header.AppHash, proofValue.Kp, proofValue.Value)
 		if err != nil {
 			return nil, fmt.Errorf("Cosmos MakeDepositProposal, proof error: %s", err)
 		}
 	} else {
-		prt := rootmulti.DefaultProofRuntime()
+		prt := ProofRuntime()
 		err = prt.VerifyAbsence(&proof, myHeader.Header.AppHash, string(proofValue.Value))
 		if err != nil {
 			return nil, fmt.Errorf("Cosmos MakeDepositProposal, proof error: %s", err)
