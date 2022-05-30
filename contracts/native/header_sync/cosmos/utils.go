@@ -21,11 +21,23 @@ import (
 	"bytes"
 	"encoding/hex"
 	"fmt"
+
 	"github.com/ethereum/go-ethereum/contracts/native"
 	hscommon "github.com/ethereum/go-ethereum/contracts/native/header_sync/common"
 	"github.com/ethereum/go-ethereum/contracts/native/utils"
 	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tendermint/tendermint/crypto/ed25519"
+	"github.com/tendermint/tendermint/crypto/secp256k1"
+	"github.com/tendermint/tendermint/crypto/sr25519"
 	"github.com/tendermint/tendermint/types"
+
+	tm34crypto "github.com/switcheo/tendermint/crypto"
+	tm34ed25519 "github.com/switcheo/tendermint/crypto/ed25519"
+	tm34secp256k1 "github.com/switcheo/tendermint/crypto/secp256k1"
+	tm34sr25519 "github.com/switcheo/tendermint/crypto/sr25519"
+	tm34bytes "github.com/switcheo/tendermint/libs/bytes"
+	tm34version "github.com/switcheo/tendermint/proto/tendermint/version"
+	tm34types "github.com/switcheo/tendermint/types"
 )
 
 func notifyEpochSwitchInfo(native *native.NativeContract, chainID uint64, info *CosmosEpochSwitchInfo) {
@@ -60,11 +72,16 @@ func PutEpochSwitchInfo(service *native.NativeContract, chainId uint64, info *Co
 func VerifyCosmosHeader(myHeader *CosmosHeader, info *CosmosEpochSwitchInfo) error {
 	// now verify this header
 	valset := types.NewValidatorSet(myHeader.Valsets)
-	if !bytes.Equal(info.NextValidatorsHash, valset.Hash()) {
-		return fmt.Errorf("VerifyCosmosHeader, block validator is not right, next validator hash: %s, "+
-			"validator set hash: %s", info.NextValidatorsHash.String(), hex.EncodeToString(valset.Hash()))
+	valSetHash := HashCosmosValSet(valset, myHeader.Header.Version.Block.Uint64())
+	// return fmt.Errorf("TESTTEST: %s %s %v", hex.EncodeToString(valSetHash), info.NextValidatorsHash, bytes.Equal(info.NextValidatorsHash, valSetHash))
+	if !bytes.Equal(info.NextValidatorsHash, valSetHash) {
+		// recheck legacy hash to allow for upgrade block to pass (info has old hash format, but header has new block version)
+		if !bytes.Equal(info.NextValidatorsHash, valset.Hash()) {
+			return fmt.Errorf("VerifyCosmosHeader, block validator is not right, next validator hash: %s, "+
+				"validator set hash: %s", info.NextValidatorsHash.String(), hex.EncodeToString(valSetHash))
+		}
 	}
-	if !bytes.Equal(myHeader.Header.ValidatorsHash, valset.Hash()) {
+	if !bytes.Equal(myHeader.Header.ValidatorsHash, valSetHash) {
 		return fmt.Errorf("VerifyCosmosHeader, block validator is not right!, header validator hash: %s, "+
 			"validator set hash: %s", myHeader.Header.ValidatorsHash.String(), hex.EncodeToString(valset.Hash()))
 	}
@@ -72,7 +89,7 @@ func VerifyCosmosHeader(myHeader *CosmosHeader, info *CosmosEpochSwitchInfo) err
 		return fmt.Errorf("VerifyCosmosHeader, commit height is not right! commit height: %d, "+
 			"header height: %d", myHeader.Commit.GetHeight(), myHeader.Header.Height)
 	}
-	if !bytes.Equal(myHeader.Commit.BlockID.Hash, myHeader.Header.Hash()) {
+	if !bytes.Equal(myHeader.Commit.BlockID.Hash, HashCosmosHeader(myHeader.Header)) {
 		return fmt.Errorf("VerifyCosmosHeader, commit hash is not right!, commit block hash: %s,"+
 			" header hash: %s", myHeader.Commit.BlockID.Hash.String(), hex.EncodeToString(valset.Hash()))
 	}
@@ -87,9 +104,9 @@ func VerifyCosmosHeader(myHeader *CosmosHeader, info *CosmosEpochSwitchInfo) err
 		if commitSig.Absent() {
 			continue // OK, some precommits can be missing.
 		}
-		_, val := valset.GetByIndex(idx)
+		val := GetValByIndex(myHeader.Valsets, myHeader.Header.Version.Block.Uint64(), idx)
 		// Validate signature.
-		precommitSignBytes := myHeader.Commit.VoteSignBytes(info.ChainID, idx)
+		precommitSignBytes := VoteSignBytes(myHeader, idx)
 		if !val.PubKey.VerifyBytes(precommitSignBytes, commitSig.Signature) {
 			return fmt.Errorf("VerifyCosmosHeader, Invalid commit -- invalid signature: %v", commitSig)
 		}
@@ -103,4 +120,112 @@ func VerifyCosmosHeader(myHeader *CosmosHeader, info *CosmosEpochSwitchInfo) err
 	}
 
 	return nil
+}
+
+// GetValByIndex gets the validator by index depending on tendermint version
+func GetValByIndex(vals []*types.Validator, blockVersion uint64, idx int) *types.Validator {
+	// sort order of val set changed on block version 11, tm v0.34:
+	// https://github.com/tendermint/tendermint/commit/25890a66350f09b0d8fd54d8b9e73eb972265946#L34
+	if blockVersion < 11 {
+		_, val := types.NewValidatorSet(vals).GetByIndex(idx)
+		return val
+	}
+	return vals[idx].Copy()
+}
+
+// HashCosmosHeader supports hashing both pre and post stargate tendermint block headers
+func HashCosmosHeader(header types.Header) []byte {
+	// hash encoding changed from amino to protobuf on block version 11, tm v0.34:
+	// https://github.com/tendermint/tendermint/pull/5173
+	if header.Version.Block < 11 {
+		return header.Hash() // legacy hash
+	}
+	// convert header to new type
+	h := tm34types.Header{
+		Version: tm34version.Consensus{
+			Block: uint64(header.Version.Block),
+			App:   uint64(header.Version.App),
+		},
+		ChainID: header.ChainID,
+		Height:  header.Height,
+		Time:    header.Time,
+		LastBlockID: tm34types.BlockID{
+			Hash: tm34bytes.HexBytes(header.LastBlockID.Hash),
+			PartSetHeader: tm34types.PartSetHeader{
+				Total: uint32(header.LastBlockID.PartsHeader.Total),
+				Hash:  tm34bytes.HexBytes(header.LastBlockID.PartsHeader.Hash),
+			},
+		},
+		LastCommitHash:     tm34bytes.HexBytes(header.LastCommitHash),
+		DataHash:           tm34bytes.HexBytes(header.DataHash),
+		ValidatorsHash:     tm34bytes.HexBytes(header.ValidatorsHash),
+		NextValidatorsHash: tm34bytes.HexBytes(header.NextValidatorsHash),
+		ConsensusHash:      tm34bytes.HexBytes(header.ConsensusHash),
+		AppHash:            tm34bytes.HexBytes(header.AppHash),
+		LastResultsHash:    tm34bytes.HexBytes(header.LastResultsHash),
+		EvidenceHash:       tm34bytes.HexBytes(header.EvidenceHash),
+		ProposerAddress:    tm34bytes.HexBytes(header.ProposerAddress),
+	}
+	// use new type's hash that hashes protobuf bytes instead of amino bytes
+	return h.Hash()
+}
+
+// HashCosmosHeader supports hashing both pre and post stargate validator sets
+func HashCosmosValSet(valSet *types.ValidatorSet, blockVersion uint64) []byte {
+	// hash encoding changed from amino to protobuf on block version 11, tm v0.34:
+	// https://github.com/tendermint/tendermint/pull/5173
+	if blockVersion < 11 {
+		return valSet.Hash() // legacy hash
+	}
+	// convert vals and valset to new type
+	vals := make([]*tm34types.Validator, valSet.Size())
+	for i, v := range valSet.Validators {
+		var pubKey tm34crypto.PubKey
+		switch pk := v.PubKey.(type) {
+		case sr25519.PubKeySr25519:
+			pubKey = tm34sr25519.PubKey(pk[:])
+		case ed25519.PubKeyEd25519:
+			pubKey = tm34ed25519.PubKey(pk[:])
+		case secp256k1.PubKeySecp256k1:
+			pubKey = tm34secp256k1.PubKey(pk[:])
+		default:
+			panic(fmt.Sprintf("Unknown pubkey type: %x", v.PubKey))
+		}
+		vals[i] = tm34types.NewValidator(pubKey, v.VotingPower)
+		vals[i].ProposerPriority = v.ProposerPriority
+	}
+	vs := tm34types.NewValidatorSet(vals)
+	// use new type's hash that hashes protobuf bytes instead of amino bytes
+	return vs.Hash()
+}
+
+func VoteSignBytes(header *CosmosHeader, valIdx int) []byte {
+	// hash encoding changed from amino to protobuf on block version 11, tm v0.34:
+	// https://github.com/tendermint/tendermint/pull/5173
+	if header.Header.Version.Block < 11 {
+		return header.Commit.VoteSignBytes(header.Header.ChainID, valIdx) // legacy hash
+	}
+	// convert commit to new type
+	sigs := make([]tm34types.CommitSig, len(header.Commit.Signatures))
+	for i, v := range header.Commit.Signatures {
+		sigs[i] = tm34types.CommitSig{
+			BlockIDFlag:      tm34types.BlockIDFlag(v.BlockIDFlag),
+			ValidatorAddress: tm34bytes.HexBytes(v.ValidatorAddress),
+			Timestamp:        v.Timestamp,
+			Signature:        v.Signature,
+		}
+	}
+	commit := tm34types.NewCommit(
+		header.Commit.Height,
+		int32(header.Commit.Round),
+		tm34types.BlockID{
+			Hash: tm34bytes.HexBytes(header.Commit.BlockID.Hash),
+			PartSetHeader: tm34types.PartSetHeader{
+				Total: uint32(header.Commit.BlockID.PartsHeader.Total),
+				Hash:  tm34bytes.HexBytes(header.Commit.BlockID.PartsHeader.Hash),
+			},
+		},
+		sigs,
+	)
+	return commit.VoteSignBytes(header.Header.ChainID, int32(valIdx))
 }
