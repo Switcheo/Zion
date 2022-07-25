@@ -23,13 +23,13 @@ import (
 	"io/ioutil"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/external"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Switcheo/Zion/accounts"
+	"github.com/Switcheo/Zion/accounts/external"
+	"github.com/Switcheo/Zion/accounts/keystore"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/crypto"
+	"github.com/Switcheo/Zion/log"
 )
 
 // ErrNoChainID is returned whenever the user failed to specify a chain id.

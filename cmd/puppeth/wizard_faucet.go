@@ -20,8 +20,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Switcheo/Zion/accounts/keystore"
+	"github.com/Switcheo/Zion/log"
 )
 
 // deployFaucet queries the user for various input on deploying a faucet, after

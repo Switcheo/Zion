@@ -21,8 +21,8 @@ package types
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/rlp"
 	"github.com/stretchr/testify/assert"
 )
 

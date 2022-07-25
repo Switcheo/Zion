@@ -23,12 +23,12 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	vfc "github.com/ethereum/go-ethereum/les/vflux/client"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/crypto"
+	vfc "github.com/Switcheo/Zion/les/vflux/client"
+	"github.com/Switcheo/Zion/p2p/enode"
+	"github.com/Switcheo/Zion/rlp"
 )
 
 // Constants to match up protocol versions and messages

@@ -22,12 +22,12 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/core"
+	"github.com/Switcheo/Zion/core/state"
+	"github.com/Switcheo/Zion/crypto"
+	"github.com/Switcheo/Zion/rlp"
 )
 
 func init() {

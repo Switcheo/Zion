@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/contracts/native/go_abi/header_sync_abi"
+	"github.com/Switcheo/Zion/accounts/abi"
+	"github.com/Switcheo/Zion/contracts/native/go_abi/header_sync_abi"
 )
 
 var (

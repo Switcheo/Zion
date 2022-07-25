@@ -21,11 +21,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/p2p/enode"
+	"github.com/Switcheo/Zion/consensus/ethash"
+	"github.com/Switcheo/Zion/core"
+	"github.com/Switcheo/Zion/core/rawdb"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/p2p/enode"
 )
 
 // verifyImportEvent verifies that one single event arrive on an import channel.

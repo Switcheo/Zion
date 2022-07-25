@@ -20,8 +20,8 @@
 package node
 
 import (
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/Switcheo/Zion/p2p"
+	"github.com/Switcheo/Zion/rpc"
 )
 
 // NoopLifecycle is a trivial implementation of the Service interface.

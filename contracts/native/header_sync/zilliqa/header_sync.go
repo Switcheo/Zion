@@ -20,15 +20,15 @@ package zilliqa
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/contracts/native/governance/node_manager"
+	"github.com/Switcheo/Zion/contracts/native/governance/side_chain_manager"
+	scom "github.com/Switcheo/Zion/contracts/native/header_sync/common"
+	"github.com/Switcheo/Zion/contracts/native/utils"
+	"github.com/Switcheo/Zion/log"
 	"github.com/Zilliqa/gozilliqa-sdk/core"
 	"github.com/Zilliqa/gozilliqa-sdk/util"
 	verifier2 "github.com/Zilliqa/gozilliqa-sdk/verifier"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/node_manager"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/side_chain_manager"
-	scom "github.com/ethereum/go-ethereum/contracts/native/header_sync/common"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
-	"github.com/ethereum/go-ethereum/log"
 )
 
 // Handler ...

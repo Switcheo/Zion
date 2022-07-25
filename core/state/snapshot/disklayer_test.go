@@ -22,13 +22,13 @@ import (
 	"os"
 	"testing"
 
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core/rawdb"
+	"github.com/Switcheo/Zion/ethdb"
+	"github.com/Switcheo/Zion/ethdb/leveldb"
+	"github.com/Switcheo/Zion/ethdb/memorydb"
+	"github.com/Switcheo/Zion/rlp"
 	"github.com/VictoriaMetrics/fastcache"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/ethdb/leveldb"
-	"github.com/ethereum/go-ethereum/ethdb/memorydb"
-	"github.com/ethereum/go-ethereum/rlp"
 )
 
 // reverse reverses the contents of a byte slice. It's used to update random accs

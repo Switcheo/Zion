@@ -22,12 +22,12 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	hscommon "github.com/ethereum/go-ethereum/contracts/native/header_sync/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/contracts/native"
+	hscommon "github.com/Switcheo/Zion/contracts/native/header_sync/common"
+	"github.com/Switcheo/Zion/core/rawdb"
+	"github.com/Switcheo/Zion/core/state"
+	"github.com/Switcheo/Zion/rlp"
 	"github.com/stretchr/testify/assert"
 	"github.com/tendermint/tendermint/libs/bytes"
 )

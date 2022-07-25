@@ -21,11 +21,11 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/protocols/eth"
-	"github.com/ethereum/go-ethereum/internal/utesting"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/eth/protocols/eth"
+	"github.com/Switcheo/Zion/internal/utesting"
+	"github.com/Switcheo/Zion/p2p"
+	"github.com/Switcheo/Zion/rlp"
 	"github.com/stretchr/testify/assert"
 )
 

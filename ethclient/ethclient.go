@@ -24,12 +24,12 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/Switcheo/Zion"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/internal/ethapi"
+	"github.com/Switcheo/Zion/rpc"
 )
 
 // Client defines typed wrappers for the Ethereum RPC API.

@@ -22,11 +22,11 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/Switcheo/Zion/accounts/abi"
+	"github.com/Switcheo/Zion/accounts/abi/bind"
+	"github.com/Switcheo/Zion/accounts/keystore"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core/types"
 )
 
 // Signer is an interface defining the callback when a contract requires a

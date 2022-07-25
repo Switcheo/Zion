@@ -24,13 +24,13 @@ import (
 	"net"
 	"os"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/nat"
-	"github.com/ethereum/go-ethereum/p2p/netutil"
+	"github.com/Switcheo/Zion/cmd/utils"
+	"github.com/Switcheo/Zion/crypto"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/p2p/discover"
+	"github.com/Switcheo/Zion/p2p/enode"
+	"github.com/Switcheo/Zion/p2p/nat"
+	"github.com/Switcheo/Zion/p2p/netutil"
 )
 
 func main() {

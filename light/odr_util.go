@@ -22,11 +22,11 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core"
+	"github.com/Switcheo/Zion/core/rawdb"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/rlp"
 )
 
 // errNonCanonicalHash is returned if the requested chain data doesn't belong

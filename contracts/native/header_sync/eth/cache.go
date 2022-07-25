@@ -23,8 +23,8 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/ethereum/go-ethereum/common/bitutil"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Switcheo/Zion/common/bitutil"
+	"github.com/Switcheo/Zion/log"
 	"golang.org/x/crypto/sha3"
 )
 

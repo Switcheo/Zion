@@ -20,9 +20,9 @@ import (
 	"hash"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/math"
+	"github.com/Switcheo/Zion/log"
 )
 
 // Config are the configuration options for the Interpreter

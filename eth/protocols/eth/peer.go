@@ -21,12 +21,12 @@ import (
 	"math/rand"
 	"sync"
 
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/p2p"
+	"github.com/Switcheo/Zion/p2p/enode"
+	"github.com/Switcheo/Zion/rlp"
 	mapset "github.com/deckarep/golang-set"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/rlp"
 )
 
 const (
@@ -84,7 +84,7 @@ type Peer struct {
 	knownTxs    mapset.Set         // Set of transaction hashes known to be known by this peer
 	txBroadcast chan []common.Hash // Channel used to queue transaction propagation requests
 	txAnnounce  chan []common.Hash // Channel used to queue transaction announcement requests
-	
+
 	term chan struct{} // Termination channel to stop the broadcasters
 	lock sync.RWMutex  // Mutex protecting the internal fields
 }

@@ -19,8 +19,8 @@
 package core
 
 import (
-	"github.com/ethereum/go-ethereum/consensus/hotstuff"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/Switcheo/Zion/consensus/hotstuff"
+	"github.com/Switcheo/Zion/core/types"
 )
 
 func (c *core) sendRequest() {
@@ -62,7 +62,7 @@ func (c *core) handleRequest(req *hotstuff.Request) error {
 		return nil
 	}
 	if c.current.highQC == nil {
-		logger.Trace("Failed to process request", "err",  "current highQC is nil")
+		logger.Trace("Failed to process request", "err", "current highQC is nil")
 		return nil
 	}
 

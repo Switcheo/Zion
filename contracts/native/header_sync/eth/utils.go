@@ -25,14 +25,14 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	scom "github.com/ethereum/go-ethereum/contracts/native/header_sync/common"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/contracts/native"
+	scom "github.com/Switcheo/Zion/contracts/native/header_sync/common"
+	"github.com/Switcheo/Zion/contracts/native/utils"
 )
 
 const (
-	// source from https://github.com/ethereum/go-ethereum/blob/master/consensus/ethash/consensus.go#L45
+	// source from https://github.com/Switcheo/Zion/blob/master/consensus/ethash/consensus.go#L45
 	allowedFutureBlockTime = 15 * time.Second // Max time from current time allowed for blocks, before they're considered future blocks
 	epochLength            = 30000
 	maxEpoch               = 2048
@@ -76,7 +76,7 @@ func putBlockHeader(native *native.NativeContract, blockHeader Header, difficult
 	}
 	storeBytes, _ := json.Marshal(&headerWithDifficultySum)
 
-	scom.SetHeaderIndex(native ,chainID, blockHeader.Hash().Bytes(), storeBytes)
+	scom.SetHeaderIndex(native, chainID, blockHeader.Hash().Bytes(), storeBytes)
 	scom.NotifyPutHeader(native, chainID, blockHeader.Number.Uint64(), blockHeader.Hash().String())
 	return nil
 }

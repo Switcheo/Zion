@@ -20,14 +20,14 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/misc"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/consensus"
+	"github.com/Switcheo/Zion/consensus/misc"
+	"github.com/Switcheo/Zion/core/state"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/core/vm"
+	"github.com/Switcheo/Zion/ethdb"
+	"github.com/Switcheo/Zion/params"
 )
 
 // BlockGen creates blocks for testing.
@@ -302,4 +302,4 @@ func (cr *fakeChainReader) GetHeaderByHash(hash common.Hash) *types.Header      
 func (cr *fakeChainReader) GetHeader(hash common.Hash, number uint64) *types.Header { return nil }
 func (cr *fakeChainReader) GetBlock(hash common.Hash, number uint64) *types.Block   { return nil }
 func (cr *fakeChainReader) GetBlockByHash(hash common.Hash) *types.Block            { return nil }
-func (cr *fakeChainReader) PreExecuteBlock(block *types.Block) error 				{ return nil }
+func (cr *fakeChainReader) PreExecuteBlock(block *types.Block) error                { return nil }

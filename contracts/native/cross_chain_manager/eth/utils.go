@@ -24,17 +24,17 @@ import (
 	"fmt"
 	"math/big"
 
-	ecom "github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	scom "github.com/ethereum/go-ethereum/contracts/native/cross_chain_manager/common"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/side_chain_manager"
-	"github.com/ethereum/go-ethereum/contracts/native/header_sync/eth"
-	"github.com/ethereum/go-ethereum/contracts/native/header_sync/eth/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie"
+	ecom "github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/contracts/native"
+	scom "github.com/Switcheo/Zion/contracts/native/cross_chain_manager/common"
+	"github.com/Switcheo/Zion/contracts/native/governance/side_chain_manager"
+	"github.com/Switcheo/Zion/contracts/native/header_sync/eth"
+	"github.com/Switcheo/Zion/contracts/native/header_sync/eth/types"
+	"github.com/Switcheo/Zion/crypto"
+	"github.com/Switcheo/Zion/light"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/rlp"
+	"github.com/Switcheo/Zion/trie"
 )
 
 func verifyFromEthTx(native *native.NativeContract, proof, extra []byte, fromChainID uint64, height uint32, sideChain *side_chain_manager.SideChain) (*scom.MakeTxParam, error) {

@@ -23,9 +23,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	. "github.com/ethereum/go-ethereum/contracts/native/go_abi/economic_abi"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
+	"github.com/Switcheo/Zion/common"
+	. "github.com/Switcheo/Zion/contracts/native/go_abi/economic_abi"
+	"github.com/Switcheo/Zion/contracts/native/utils"
 	"github.com/stretchr/testify/assert"
 )
 

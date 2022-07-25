@@ -34,12 +34,12 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/node"
+	"github.com/Switcheo/Zion/p2p"
+	"github.com/Switcheo/Zion/p2p/enode"
+	"github.com/Switcheo/Zion/rpc"
 	"github.com/docker/docker/pkg/reexec"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/rpc"
 	"github.com/gorilla/websocket"
 )
 

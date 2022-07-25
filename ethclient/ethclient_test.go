@@ -22,27 +22,27 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/node_manager"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
-	"github.com/ethereum/go-ethereum/core/state"
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/contracts/native/governance/node_manager"
+	"github.com/Switcheo/Zion/contracts/native/utils"
+	"github.com/Switcheo/Zion/core/state"
 	"math/big"
 	"reflect"
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/Switcheo/Zion"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/consensus/ethash"
+	"github.com/Switcheo/Zion/core"
+	"github.com/Switcheo/Zion/core/rawdb"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/crypto"
+	"github.com/Switcheo/Zion/eth"
+	"github.com/Switcheo/Zion/eth/ethconfig"
+	"github.com/Switcheo/Zion/node"
+	"github.com/Switcheo/Zion/params"
+	"github.com/Switcheo/Zion/rpc"
 )
 
 // Verify that Client implements the ethereum interfaces.
@@ -652,7 +652,7 @@ func TestUnmarshalHeader(t *testing.T) {
 
 	var (
 		blockNum uint64 = 1099
-		epochID uint64 = 5
+		epochID  uint64 = 5
 	)
 	block, err := cli.BlockByNumber(context.Background(), new(big.Int).SetUint64(blockNum))
 	if err != nil {

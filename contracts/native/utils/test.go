@@ -18,9 +18,9 @@
 package utils
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core/rawdb"
+	"github.com/Switcheo/Zion/core/state"
 )
 
 func NewTestStateDB() *state.StateDB {

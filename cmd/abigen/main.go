@@ -25,13 +25,13 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common/compiler"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Switcheo/Zion/accounts/abi"
+	"github.com/Switcheo/Zion/accounts/abi/bind"
+	"github.com/Switcheo/Zion/cmd/utils"
+	"github.com/Switcheo/Zion/common/compiler"
+	"github.com/Switcheo/Zion/crypto"
+	"github.com/Switcheo/Zion/internal/flags"
+	"github.com/Switcheo/Zion/log"
 	"gopkg.in/urfave/cli.v1"
 )
 

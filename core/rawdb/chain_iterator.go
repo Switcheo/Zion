@@ -21,12 +21,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/prque"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/prque"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/ethdb"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/rlp"
 )
 
 // InitDatabaseFromFreezer reinitializes an empty database from a previous batch

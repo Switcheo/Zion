@@ -25,10 +25,10 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/core/rawdb"
+	"github.com/Switcheo/Zion/core/state"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -53,7 +53,7 @@ func TestMain(m *testing.M) {
 	os.Exit(m.Run())
 }
 
-// go test -v -count=1 github.com/ethereum/go-ethereum/contracts/native/governance/node_manager -run TestPropose
+// go test -v -count=1 github.com/Switcheo/Zion/contracts/native/governance/node_manager -run TestPropose
 func TestPropose(t *testing.T) {
 	type TestCase struct {
 		BlockNum      int
@@ -262,7 +262,7 @@ func TestPropose(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 github.com/ethereum/go-ethereum/contracts/native/governance/node_manager -run TestVote
+// go test -v -count=1 github.com/Switcheo/Zion/contracts/native/governance/node_manager -run TestVote
 func TestVote(t *testing.T) {
 	epochID := uint64(2)
 

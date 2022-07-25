@@ -25,15 +25,15 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/accounts/scwallet"
-	"github.com/ethereum/go-ethereum/accounts/usbwallet"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/signer/storage"
+	"github.com/Switcheo/Zion/accounts"
+	"github.com/Switcheo/Zion/accounts/keystore"
+	"github.com/Switcheo/Zion/accounts/scwallet"
+	"github.com/Switcheo/Zion/accounts/usbwallet"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/internal/ethapi"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/signer/storage"
 )
 
 const (

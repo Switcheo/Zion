@@ -27,12 +27,12 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/usbwallet/trezor"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Switcheo/Zion/accounts"
+	"github.com/Switcheo/Zion/accounts/usbwallet/trezor"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/log"
 	"github.com/golang/protobuf/proto"
 )
 

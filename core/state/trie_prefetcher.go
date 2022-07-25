@@ -19,9 +19,9 @@ package state
 import (
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/metrics"
 )
 
 var (

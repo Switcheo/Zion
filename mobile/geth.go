@@ -24,17 +24,17 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/ethstats"
-	"github.com/ethereum/go-ethereum/internal/debug"
-	"github.com/ethereum/go-ethereum/les"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/nat"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Switcheo/Zion/core"
+	"github.com/Switcheo/Zion/eth/downloader"
+	"github.com/Switcheo/Zion/eth/ethconfig"
+	"github.com/Switcheo/Zion/ethclient"
+	"github.com/Switcheo/Zion/ethstats"
+	"github.com/Switcheo/Zion/internal/debug"
+	"github.com/Switcheo/Zion/les"
+	"github.com/Switcheo/Zion/node"
+	"github.com/Switcheo/Zion/p2p"
+	"github.com/Switcheo/Zion/p2p/nat"
+	"github.com/Switcheo/Zion/params"
 )
 
 // NodeConfig represents the collection of configuration values to fine tune the Geth

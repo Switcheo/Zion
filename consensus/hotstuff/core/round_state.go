@@ -21,8 +21,8 @@ package core
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/consensus/hotstuff"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff/message_set"
+	"github.com/Switcheo/Zion/consensus/hotstuff"
+	"github.com/Switcheo/Zion/consensus/hotstuff/message_set"
 )
 
 type roundState struct {

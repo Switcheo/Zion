@@ -22,12 +22,12 @@ import (
 	"os"
 	"strings"
 
+	"github.com/Switcheo/Zion/internal/ethapi"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/signer/core"
+	"github.com/Switcheo/Zion/signer/rules/deps"
+	"github.com/Switcheo/Zion/signer/storage"
 	"github.com/dop251/goja"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/signer/core"
-	"github.com/ethereum/go-ethereum/signer/rules/deps"
-	"github.com/ethereum/go-ethereum/signer/storage"
 )
 
 var (

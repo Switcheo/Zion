@@ -23,9 +23,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/crypto"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -21,7 +21,7 @@ package side_chain_manager
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/rlp"
 	"github.com/stretchr/testify/assert"
 )
 

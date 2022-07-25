@@ -21,13 +21,13 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/bloombits"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core"
+	"github.com/Switcheo/Zion/core/bloombits"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/ethdb"
+	"github.com/Switcheo/Zion/event"
+	"github.com/Switcheo/Zion/rpc"
 )
 
 type Backend interface {

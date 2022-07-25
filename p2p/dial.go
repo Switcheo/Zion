@@ -27,10 +27,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/netutil"
+	"github.com/Switcheo/Zion/common/mclock"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/p2p/enode"
+	"github.com/Switcheo/Zion/p2p/netutil"
 )
 
 const (

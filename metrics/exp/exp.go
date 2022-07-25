@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/metrics/prometheus"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/metrics"
+	"github.com/Switcheo/Zion/metrics/prometheus"
 )
 
 type exp struct {

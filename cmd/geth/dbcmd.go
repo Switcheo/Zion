@@ -24,14 +24,14 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/console/prompt"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/Switcheo/Zion/cmd/utils"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/console/prompt"
+	"github.com/Switcheo/Zion/core/rawdb"
+	"github.com/Switcheo/Zion/ethdb"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/trie"
 	"gopkg.in/urfave/cli.v1"
 )
 

@@ -24,8 +24,8 @@ import (
 	"io"
 	"math/big"
 
+	ethCrypto "github.com/Switcheo/Zion/crypto"
 	secp256k1 "github.com/btcsuite/btcd/btcec"
-	ethCrypto "github.com/ethereum/go-ethereum/crypto"
 
 	amino "github.com/tendermint/go-amino"
 

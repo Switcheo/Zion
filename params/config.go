@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/Switcheo/Zion/common"
 	"golang.org/x/crypto/sha3"
 )
 
@@ -59,9 +59,9 @@ var (
 	TestnetMainChainID uint64 = 60802
 	DevnetMainChainID  uint64 = 60803
 
-	OneEth, _ = new(big.Int).SetString("1000000000000000000", 10)
+	OneEth, _      = new(big.Int).SetString("1000000000000000000", 10)
 	uGenesisSupply = new(big.Int).SetUint64(1e8)
-	GenesisSupply = new(big.Int).Mul(OneEth, uGenesisSupply)
+	GenesisSupply  = new(big.Int).Mul(OneEth, uGenesisSupply)
 )
 
 func IsMainChain(chainID uint64) bool {

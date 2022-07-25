@@ -22,9 +22,9 @@ import (
 	"math/big"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/consensus"
+	"github.com/Switcheo/Zion/consensus/hotstuff"
 )
 
 var once sync.Once

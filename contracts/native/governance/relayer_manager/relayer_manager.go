@@ -20,11 +20,11 @@ package relayer_manager
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/contracts/native/contract"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/node_manager"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
+	"github.com/Switcheo/Zion/accounts/abi"
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/contracts/native/contract"
+	"github.com/Switcheo/Zion/contracts/native/governance/node_manager"
+	"github.com/Switcheo/Zion/contracts/native/utils"
 )
 
 const contractName = "relayer manager"

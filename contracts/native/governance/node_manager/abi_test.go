@@ -21,10 +21,10 @@ package node_manager
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	. "github.com/ethereum/go-ethereum/contracts/native/go_abi/node_manager_abi"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/hexutil"
+	. "github.com/Switcheo/Zion/contracts/native/go_abi/node_manager_abi"
+	"github.com/Switcheo/Zion/contracts/native/utils"
 	"github.com/stretchr/testify/assert"
 )
 

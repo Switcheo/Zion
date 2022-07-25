@@ -20,16 +20,16 @@ package message_set
 
 import (
 	"crypto/ecdsa"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff/core"
+	"github.com/Switcheo/Zion/consensus/hotstuff/core"
 	"math/big"
 	"sort"
 	"strings"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff/validator"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/consensus/hotstuff"
+	"github.com/Switcheo/Zion/consensus/hotstuff/validator"
+	"github.com/Switcheo/Zion/crypto"
 )
 
 type Keys []*ecdsa.PrivateKey

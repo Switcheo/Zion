@@ -22,9 +22,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ethereum/go-ethereum/common/fdlimit"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Switcheo/Zion/common/fdlimit"
+	"github.com/Switcheo/Zion/internal/flags"
+	"github.com/Switcheo/Zion/log"
 	"gopkg.in/urfave/cli.v1"
 )
 

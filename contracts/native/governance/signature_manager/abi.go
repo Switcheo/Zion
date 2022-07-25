@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/contracts/native/go_abi/signature_manager_abi"
+	"github.com/Switcheo/Zion/accounts/abi"
+	"github.com/Switcheo/Zion/contracts/native/go_abi/signature_manager_abi"
 )
 
 func GetABI() *abi.ABI {

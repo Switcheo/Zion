@@ -26,11 +26,11 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/forkid"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/core"
+	"github.com/Switcheo/Zion/core/forkid"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/params"
+	"github.com/Switcheo/Zion/rlp"
 )
 
 type Chain struct {

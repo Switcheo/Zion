@@ -19,8 +19,8 @@ package polygon
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
-	polygonTypes "github.com/ethereum/go-ethereum/contracts/native/header_sync/polygon/types"
+	"github.com/Switcheo/Zion/common"
+	polygonTypes "github.com/Switcheo/Zion/contracts/native/header_sync/polygon/types"
 )
 
 type Span struct {

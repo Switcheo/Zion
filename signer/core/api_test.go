@@ -27,16 +27,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/signer/core"
-	"github.com/ethereum/go-ethereum/signer/fourbyte"
-	"github.com/ethereum/go-ethereum/signer/storage"
+	"github.com/Switcheo/Zion/accounts"
+	"github.com/Switcheo/Zion/accounts/keystore"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/internal/ethapi"
+	"github.com/Switcheo/Zion/rlp"
+	"github.com/Switcheo/Zion/signer/core"
+	"github.com/Switcheo/Zion/signer/fourbyte"
+	"github.com/Switcheo/Zion/signer/storage"
 )
 
 //Used for testing

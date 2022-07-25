@@ -22,9 +22,9 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/contracts/native/utils"
 )
 
 func Replace0x(s string) string {

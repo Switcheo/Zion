@@ -22,9 +22,9 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/native/header_sync/eth"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/contracts/native/header_sync/eth"
+	"github.com/Switcheo/Zion/params"
 )
 
 // VerifyGaslimit verifies the header gas limit according increase/decrease

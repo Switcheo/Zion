@@ -23,9 +23,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Switcheo/Zion/accounts"
+	"github.com/Switcheo/Zion/event"
+	"github.com/Switcheo/Zion/log"
 	"github.com/karalabe/usb"
 )
 

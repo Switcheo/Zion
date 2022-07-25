@@ -19,15 +19,15 @@ package main
 import (
 	"strconv"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/accounts/external"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/checkpointoracle"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/Switcheo/Zion/accounts"
+	"github.com/Switcheo/Zion/accounts/abi/bind"
+	"github.com/Switcheo/Zion/accounts/external"
+	"github.com/Switcheo/Zion/cmd/utils"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/contracts/checkpointoracle"
+	"github.com/Switcheo/Zion/ethclient"
+	"github.com/Switcheo/Zion/params"
+	"github.com/Switcheo/Zion/rpc"
 	"gopkg.in/urfave/cli.v1"
 )
 

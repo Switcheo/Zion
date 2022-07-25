@@ -25,13 +25,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/Switcheo/Zion/common/mclock"
+	"github.com/Switcheo/Zion/crypto"
+	"github.com/Switcheo/Zion/internal/testlog"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/p2p/enode"
+	"github.com/Switcheo/Zion/p2p/enr"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/internal/testlog"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/enr"
 )
 
 const (

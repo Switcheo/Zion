@@ -20,7 +20,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/contracts/native/header_sync/polygon/types/common"
+	"github.com/Switcheo/Zion/contracts/native/header_sync/polygon/types/common"
 )
 
 // Commit contains the evidence that a block was committed by a set of validators.

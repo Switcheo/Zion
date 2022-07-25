@@ -18,9 +18,9 @@
 package neo3_state_manager
 
 import (
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
+	"github.com/Switcheo/Zion/accounts/abi"
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/contracts/native/utils"
 )
 
 const contractName = "neo3 state manager"

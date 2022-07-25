@@ -24,12 +24,12 @@ import (
 	"math/big"
 	"reflect"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/p2p"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/consensus"
+	"github.com/Switcheo/Zion/consensus/hotstuff"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/event"
+	"github.com/Switcheo/Zion/p2p"
 	lru "github.com/hashicorp/golang-lru"
 )
 
@@ -130,6 +130,6 @@ func (s *backend) SubscribeRequest(ch chan<- types.Block) event.Subscription {
 	return s.reqFeed.Subscribe(ch)
 }
 
-func (s *backend) SubscribeNodes(ch chan <- consensus.StaticNodesEvent) event.Subscription {
+func (s *backend) SubscribeNodes(ch chan<- consensus.StaticNodesEvent) event.Subscription {
 	return s.nodesFeed.Subscribe(ch)
 }

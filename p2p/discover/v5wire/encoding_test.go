@@ -30,11 +30,11 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/common/mclock"
+	"github.com/Switcheo/Zion/crypto"
+	"github.com/Switcheo/Zion/p2p/enode"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p/enode"
 )
 
 // To regenerate discv5 test vectors, run

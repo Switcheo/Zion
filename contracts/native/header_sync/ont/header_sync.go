@@ -21,11 +21,11 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/contracts/native/governance/node_manager"
+	"github.com/Switcheo/Zion/contracts/native/governance/node_manager"
 
-	"github.com/ethereum/go-ethereum/contracts/native"
-	hscommon "github.com/ethereum/go-ethereum/contracts/native/header_sync/common"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
+	"github.com/Switcheo/Zion/contracts/native"
+	hscommon "github.com/Switcheo/Zion/contracts/native/header_sync/common"
+	"github.com/Switcheo/Zion/contracts/native/utils"
 	"github.com/ontio/ontology-crypto/keypair"
 	ocommon "github.com/ontio/ontology/common"
 	otypes "github.com/ontio/ontology/core/types"

@@ -21,8 +21,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/rpc"
 )
 
 // StartHTTPEndpoint starts the HTTP RPC endpoint.

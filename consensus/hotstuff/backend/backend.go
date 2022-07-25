@@ -25,16 +25,16 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff/core"
-	snr "github.com/ethereum/go-ethereum/consensus/hotstuff/signer"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/consensus"
+	"github.com/Switcheo/Zion/consensus/hotstuff"
+	"github.com/Switcheo/Zion/consensus/hotstuff/core"
+	snr "github.com/Switcheo/Zion/consensus/hotstuff/signer"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/ethdb"
+	"github.com/Switcheo/Zion/event"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/trie"
 	lru "github.com/hashicorp/golang-lru"
 )
 
@@ -249,7 +249,7 @@ func (s *backend) Commit(proposal hotstuff.Proposal) error {
 		s.logger.Error("Committed to miner worker", "proposal", "not block")
 		return errInvalidProposal
 	}
-	
+
 	s.logger.Info("Committed", "address", s.Address(), "hash", proposal.Hash(), "number", proposal.Number().Uint64())
 	// - if the proposed and committed blocks are the same, send the proposed hash
 	//   to commit channel, which is being watched inside the engine.Seal() function.

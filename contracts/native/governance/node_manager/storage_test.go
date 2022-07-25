@@ -21,7 +21,7 @@ package node_manager
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/Switcheo/Zion/common"
 	"github.com/stretchr/testify/assert"
 )
 

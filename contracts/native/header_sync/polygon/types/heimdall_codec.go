@@ -17,8 +17,8 @@
 package types
 
 import (
+	"github.com/Switcheo/Zion/contracts/native/header_sync/polygon/types/secp256k1"
 	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/ethereum/go-ethereum/contracts/native/header_sync/polygon/types/secp256k1"
 	"github.com/tendermint/tendermint/crypto"
 )
 

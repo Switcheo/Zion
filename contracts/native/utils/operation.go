@@ -19,7 +19,7 @@ package utils
 
 import (
 	"encoding/binary"
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/Switcheo/Zion/common"
 )
 
 func ConcatKey(contract common.Address, args ...[]byte) []byte {

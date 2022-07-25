@@ -41,23 +41,23 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/ethstats"
-	"github.com/ethereum/go-ethereum/les"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/nat"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Switcheo/Zion/accounts"
+	"github.com/Switcheo/Zion/accounts/keystore"
+	"github.com/Switcheo/Zion/cmd/utils"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/eth/downloader"
+	"github.com/Switcheo/Zion/eth/ethconfig"
+	"github.com/Switcheo/Zion/ethclient"
+	"github.com/Switcheo/Zion/ethstats"
+	"github.com/Switcheo/Zion/les"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/node"
+	"github.com/Switcheo/Zion/p2p"
+	"github.com/Switcheo/Zion/p2p/enode"
+	"github.com/Switcheo/Zion/p2p/nat"
+	"github.com/Switcheo/Zion/params"
 	"github.com/gorilla/websocket"
 )
 
@@ -469,7 +469,7 @@ func (f *faucet) apiHandler(w http.ResponseWriter, r *http.Request) {
 			id = username
 		default:
 			//lint:ignore ST1005 This error is to be displayed in the browser
-			err = errors.New("Something funky happened, please open an issue at https://github.com/ethereum/go-ethereum/issues")
+			err = errors.New("Something funky happened, please open an issue at https://github.com/Switcheo/Zion/issues")
 		}
 		if err != nil {
 			if err = sendError(wsconn, err); err != nil {

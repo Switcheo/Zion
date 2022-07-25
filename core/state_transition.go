@@ -21,11 +21,11 @@ import (
 	"math"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/core/vm"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/params"
 )
 
 /*

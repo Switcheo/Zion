@@ -22,10 +22,10 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/accounts/abi"
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/rlp"
 )
 
 const (

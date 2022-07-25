@@ -26,13 +26,13 @@ import (
 
 	"hash"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/common/math"
-	otypes "github.com/ethereum/go-ethereum/contracts/native/header_sync/eth/types"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/common/math"
+	otypes "github.com/Switcheo/Zion/contracts/native/header_sync/eth/types"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/params"
+	"github.com/Switcheo/Zion/rlp"
 	"golang.org/x/crypto/sha3"
 )
 

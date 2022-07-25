@@ -20,7 +20,7 @@ package cosmos
 import (
 	"io"
 
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/rlp"
 	"github.com/tendermint/tendermint/libs/bytes"
 	"github.com/tendermint/tendermint/types"
 )
@@ -48,10 +48,10 @@ func (m *CosmosEpochSwitchInfo) EncodeRLP(w io.Writer) error {
 }
 func (m *CosmosEpochSwitchInfo) DecodeRLP(s *rlp.Stream) error {
 	var data struct {
-		Height uint64
-		BlockHash bytes.HexBytes
+		Height             uint64
+		BlockHash          bytes.HexBytes
 		NextValidatorsHash bytes.HexBytes
-		ChainID string
+		ChainID            string
 	}
 
 	if err := s.Decode(&data); err != nil {

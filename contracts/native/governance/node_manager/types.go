@@ -25,9 +25,9 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/contracts/native/utils"
+	"github.com/Switcheo/Zion/rlp"
 )
 
 type PeerInfo struct {

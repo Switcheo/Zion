@@ -22,11 +22,11 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff/validator"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/consensus/hotstuff"
+	"github.com/Switcheo/Zion/consensus/hotstuff/validator"
+	"github.com/Switcheo/Zion/crypto"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -3,8 +3,8 @@ package cross_chain_manager
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/contracts/native/utils"
 )
 
 func PutBlackChain(native *native.NativeContract, chainID uint64) error {

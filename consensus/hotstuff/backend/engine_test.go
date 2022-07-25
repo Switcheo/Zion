@@ -23,8 +23,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/consensus/hotstuff"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/Switcheo/Zion/consensus/hotstuff"
+	"github.com/Switcheo/Zion/core/types"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -121,7 +121,7 @@ func TestSealCommitted(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 github.com/ethereum/go-ethereum/consensus/hotstuff/basic/backend -run TestInsertChain
+// go test -v -count=1 github.com/Switcheo/Zion/consensus/hotstuff/basic/backend -run TestInsertChain
 func TestInsertChain(t *testing.T) {
 	chain, engine := singleNodeChain()
 	expectBlock := makeBlock(t, chain, engine, chain.Genesis())

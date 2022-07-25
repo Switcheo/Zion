@@ -20,9 +20,9 @@ import (
 	"bytes"
 	"errors"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/math"
+	"github.com/Switcheo/Zion/params"
 )
 
 // memoryGasCost calculates the quadratic gas for memory expansion. It does so

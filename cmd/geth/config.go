@@ -27,13 +27,13 @@ import (
 
 	"gopkg.in/urfave/cli.v1"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/eth/catalyst"
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Switcheo/Zion/cmd/utils"
+	"github.com/Switcheo/Zion/eth/catalyst"
+	"github.com/Switcheo/Zion/eth/ethconfig"
+	"github.com/Switcheo/Zion/internal/ethapi"
+	"github.com/Switcheo/Zion/metrics"
+	"github.com/Switcheo/Zion/node"
+	"github.com/Switcheo/Zion/params"
 	"github.com/naoina/toml"
 )
 

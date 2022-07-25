@@ -19,9 +19,9 @@ package vm
 import (
 	"bytes"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/params"
 	"github.com/holiman/uint256"
 	"golang.org/x/crypto/sha3"
 )

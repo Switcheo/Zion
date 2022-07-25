@@ -20,7 +20,7 @@ import (
 	"io"
 	"sort"
 
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/rlp"
 )
 
 type SigInfo struct {

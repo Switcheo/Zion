@@ -20,12 +20,12 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/ethereum/go-ethereum/cmd/devp2p/internal/ethtest"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/internal/utesting"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/rlpx"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/cmd/devp2p/internal/ethtest"
+	"github.com/Switcheo/Zion/crypto"
+	"github.com/Switcheo/Zion/internal/utesting"
+	"github.com/Switcheo/Zion/p2p"
+	"github.com/Switcheo/Zion/p2p/rlpx"
+	"github.com/Switcheo/Zion/rlp"
 	"gopkg.in/urfave/cli.v1"
 )
 

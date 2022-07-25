@@ -20,7 +20,7 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/contracts/native/header_sync/polygon/types/common"
+	"github.com/Switcheo/Zion/contracts/native/header_sync/polygon/types/common"
 )
 
 // SideTxResult side tx result for vote

@@ -25,14 +25,14 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	ethcommon "github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	scom "github.com/ethereum/go-ethereum/contracts/native/header_sync/common"
-	etypes "github.com/ethereum/go-ethereum/contracts/native/header_sync/eth/types"
-	"github.com/ethereum/go-ethereum/contracts/native/header_sync/heco"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/Switcheo/Zion/common"
+	ethcommon "github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/contracts/native"
+	scom "github.com/Switcheo/Zion/contracts/native/header_sync/common"
+	etypes "github.com/Switcheo/Zion/contracts/native/header_sync/eth/types"
+	"github.com/Switcheo/Zion/contracts/native/header_sync/heco"
+	"github.com/Switcheo/Zion/contracts/native/utils"
+	"github.com/Switcheo/Zion/crypto"
 	"github.com/stretchr/testify/assert"
 )
 

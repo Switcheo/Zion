@@ -20,15 +20,15 @@ import (
 	"encoding/binary"
 	"encoding/json"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core"
+	"github.com/Switcheo/Zion/core/state"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/light"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/metrics"
+	"github.com/Switcheo/Zion/rlp"
+	"github.com/Switcheo/Zion/trie"
 )
 
 // serverBackend defines the backend functions needed for serving LES requests

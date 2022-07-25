@@ -18,16 +18,16 @@
 package boot
 
 import (
-	"github.com/ethereum/go-ethereum/contracts/native/cross_chain_manager"
-	"github.com/ethereum/go-ethereum/contracts/native/economic"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/neo3_state_manager"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/node_manager"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/relayer_manager"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/side_chain_manager"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/signature_manager"
-	"github.com/ethereum/go-ethereum/contracts/native/header_sync"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Switcheo/Zion/contracts/native/cross_chain_manager"
+	"github.com/Switcheo/Zion/contracts/native/economic"
+	"github.com/Switcheo/Zion/contracts/native/governance/neo3_state_manager"
+	"github.com/Switcheo/Zion/contracts/native/governance/node_manager"
+	"github.com/Switcheo/Zion/contracts/native/governance/relayer_manager"
+	"github.com/Switcheo/Zion/contracts/native/governance/side_chain_manager"
+	"github.com/Switcheo/Zion/contracts/native/governance/signature_manager"
+	"github.com/Switcheo/Zion/contracts/native/header_sync"
+	"github.com/Switcheo/Zion/contracts/native/utils"
+	"github.com/Switcheo/Zion/log"
 )
 
 func InitNativeContracts() {

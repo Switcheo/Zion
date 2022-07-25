@@ -19,9 +19,9 @@ package main
 import (
 	"os"
 
-	"github.com/ethereum/go-ethereum/cmd/devp2p/internal/v4test"
-	"github.com/ethereum/go-ethereum/internal/utesting"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Switcheo/Zion/cmd/devp2p/internal/v4test"
+	"github.com/Switcheo/Zion/internal/utesting"
+	"github.com/Switcheo/Zion/log"
 	"gopkg.in/urfave/cli.v1"
 )
 

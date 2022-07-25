@@ -21,8 +21,8 @@ package rawdb
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/ethdb"
+	"github.com/Switcheo/Zion/common/math"
+	"github.com/Switcheo/Zion/ethdb"
 )
 
 var (

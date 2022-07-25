@@ -1,3 +1,6 @@
+//go:build !libsecp256k1
+// +build !libsecp256k1
+
 /*
  * Copyright (C) 2021 The poly network Authors
  * This file is part of The poly network library.
@@ -14,21 +17,19 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with The poly network .  If not, see <http://www.gnu.org/licenses/>.
  */
-// +build !libsecp256k1
-
 package secp256k1
 
 import (
 	"math/big"
 
+	ethCrypto "github.com/Switcheo/Zion/crypto"
 	secp256k1 "github.com/btcsuite/btcd/btcec"
-	ethCrypto "github.com/ethereum/go-ethereum/crypto"
 )
 
 // used to reject malleable signatures
 // see:
-//  - https://github.com/ethereum/go-ethereum/blob/f9401ae011ddf7f8d2d95020b7446c17f8d98dc1/crypto/signature_nocgo.go#L90-L93
-//  - https://github.com/ethereum/go-ethereum/blob/f9401ae011ddf7f8d2d95020b7446c17f8d98dc1/crypto/crypto.go#L39
+//  - https://github.com/Switcheo/Zion/blob/f9401ae011ddf7f8d2d95020b7446c17f8d98dc1/crypto/signature_nocgo.go#L90-L93
+//  - https://github.com/Switcheo/Zion/blob/f9401ae011ddf7f8d2d95020b7446c17f8d98dc1/crypto/crypto.go#L39
 var secp256k1halfN = new(big.Int).Rsh(secp256k1.S256().N, 1)
 
 // Sign creates an ECDSA signature on curve Secp256k1, using SHA256 on the msg.
@@ -59,7 +60,7 @@ func (pubKey PubKeySecp256k1) VerifyBytes(msg []byte, sigStr []byte) bool {
 	// // parse the signature:
 	// signature := signatureFromBytes(sigStr)
 	// // Reject malleable signatures. libsecp256k1 does this check but btcec doesn't.
-	// // see: https://github.com/ethereum/go-ethereum/blob/f9401ae011ddf7f8d2d95020b7446c17f8d98dc1/crypto/signature_nocgo.go#L90-L93
+	// // see: https://github.com/Switcheo/Zion/blob/f9401ae011ddf7f8d2d95020b7446c17f8d98dc1/crypto/signature_nocgo.go#L90-L93
 	// if signature.S.Cmp(secp256k1halfN) > 0 {
 	// 	return false
 	// }

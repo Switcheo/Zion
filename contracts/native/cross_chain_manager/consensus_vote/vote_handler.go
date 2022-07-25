@@ -20,11 +20,11 @@ package consensus_vote
 
 import (
 	"fmt"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/rlp"
 
-	"github.com/ethereum/go-ethereum/contracts/native"
-	scom "github.com/ethereum/go-ethereum/contracts/native/cross_chain_manager/common"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
+	"github.com/Switcheo/Zion/contracts/native"
+	scom "github.com/Switcheo/Zion/contracts/native/cross_chain_manager/common"
+	"github.com/Switcheo/Zion/contracts/native/utils"
 )
 
 type VoteHandler struct {
@@ -51,7 +51,7 @@ func (this *VoteHandler) MakeDepositProposal(service *native.NativeContract) (*s
 	if err != nil {
 		return nil, err
 	}
-	
+
 	ok, err := CheckConsensusSigns(service, blob)
 	if err != nil {
 		return nil, fmt.Errorf("vote MakeDepositProposal, CheckConsensusSigns error: %v", err)

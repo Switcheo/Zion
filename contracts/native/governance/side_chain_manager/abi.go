@@ -22,11 +22,11 @@ import (
 	"io"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/rlp"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/native/go_abi/side_chain_manager_abi"
+	"github.com/Switcheo/Zion/accounts/abi"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/contracts/native/go_abi/side_chain_manager_abi"
 )
 
 var (

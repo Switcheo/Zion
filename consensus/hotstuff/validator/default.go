@@ -25,8 +25,8 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/consensus/hotstuff"
 )
 
 var ErrInvalidParticipant = errors.New("invalid participants")

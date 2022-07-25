@@ -21,13 +21,13 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/contracts/native/cross_chain_manager/common"
-	scom "github.com/ethereum/go-ethereum/contracts/native/cross_chain_manager/common"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/side_chain_manager"
-	"github.com/ethereum/go-ethereum/contracts/native/header_sync/eth/types"
-	"github.com/ethereum/go-ethereum/contracts/native/header_sync/quorum"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/contracts/native/cross_chain_manager/common"
+	scom "github.com/Switcheo/Zion/contracts/native/cross_chain_manager/common"
+	"github.com/Switcheo/Zion/contracts/native/governance/side_chain_manager"
+	"github.com/Switcheo/Zion/contracts/native/header_sync/eth/types"
+	"github.com/Switcheo/Zion/contracts/native/header_sync/quorum"
+	"github.com/Switcheo/Zion/contracts/native/utils"
 )
 
 type QuorumHandler struct{}

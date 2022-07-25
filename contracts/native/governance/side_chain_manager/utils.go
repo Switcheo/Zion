@@ -20,13 +20,13 @@ package side_chain_manager
 import (
 	"fmt"
 
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/contracts/native/utils"
+	"github.com/Switcheo/Zion/rlp"
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcutil"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
-	"github.com/ethereum/go-ethereum/rlp"
 )
 
 var netParam = &chaincfg.TestNet3Params
@@ -149,7 +149,7 @@ func putQuitSideChain(native *native.NativeContract, chainid uint64) error {
 	contract := utils.SideChainManagerContractAddress
 	chainidByte := utils.GetUint64Bytes(chainid)
 
-	native.GetCacheDB().Put(utils.ConcatKey(contract, []byte(QUIT_SIDE_CHAIN_REQUEST), chainidByte),chainidByte)
+	native.GetCacheDB().Put(utils.ConcatKey(contract, []byte(QUIT_SIDE_CHAIN_REQUEST), chainidByte), chainidByte)
 	return nil
 }
 

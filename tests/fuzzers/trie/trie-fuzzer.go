@@ -21,9 +21,9 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/ethdb/memorydb"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/ethdb/memorydb"
+	"github.com/Switcheo/Zion/trie"
 )
 
 // randTest performs random trie operations.

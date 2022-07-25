@@ -19,7 +19,7 @@ package types
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum/contracts/native/header_sync/polygon/types/common"
+	"github.com/Switcheo/Zion/contracts/native/header_sync/polygon/types/common"
 )
 
 type CanonicalVote struct {

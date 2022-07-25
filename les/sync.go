@@ -21,12 +21,12 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core/rawdb"
+	"github.com/Switcheo/Zion/eth/downloader"
+	"github.com/Switcheo/Zion/light"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/params"
 )
 
 var errInvalidCheckpoint = errors.New("invalid advertised checkpoint")

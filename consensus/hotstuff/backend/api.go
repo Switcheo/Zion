@@ -19,8 +19,8 @@
 package backend
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/consensus"
 )
 
 // API is a user facing RPC API to allow controlling the address and voting

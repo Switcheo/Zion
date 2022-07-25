@@ -19,9 +19,9 @@
 package consensus_vote
 
 import (
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/node_manager"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/contracts/native/governance/node_manager"
+	"github.com/Switcheo/Zion/log"
 )
 
 func CheckConsensusSigns(s *native.NativeContract, input []byte) (bool, error) {

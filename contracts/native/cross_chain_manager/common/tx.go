@@ -22,10 +22,10 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/contracts/native/utils"
+	"github.com/Switcheo/Zion/crypto"
+	"github.com/Switcheo/Zion/rlp"
 )
 
 func MakeTransaction(service *native.NativeContract, params *MakeTxParam, fromChainID uint64) error {

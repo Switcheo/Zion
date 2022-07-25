@@ -24,8 +24,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/consensus/hotstuff"
 )
 
 // Construct a new message set to accumulate messages for given height/view number.

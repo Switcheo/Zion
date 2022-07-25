@@ -21,7 +21,7 @@ package hotstuff
 import (
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/Switcheo/Zion/common"
 )
 
 type Validator interface {

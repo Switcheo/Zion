@@ -21,10 +21,10 @@ import (
 	"bytes"
 	"encoding/hex"
 	"fmt"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	hscommon "github.com/ethereum/go-ethereum/contracts/native/header_sync/common"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/contracts/native"
+	hscommon "github.com/Switcheo/Zion/contracts/native/header_sync/common"
+	"github.com/Switcheo/Zion/contracts/native/utils"
+	"github.com/Switcheo/Zion/rlp"
 	"github.com/tendermint/tendermint/types"
 )
 

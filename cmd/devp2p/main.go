@@ -22,9 +22,9 @@ import (
 	"path/filepath"
 	"sort"
 
-	"github.com/ethereum/go-ethereum/internal/debug"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Switcheo/Zion/internal/debug"
+	"github.com/Switcheo/Zion/p2p/enode"
+	"github.com/Switcheo/Zion/params"
 	"gopkg.in/urfave/cli.v1"
 )
 

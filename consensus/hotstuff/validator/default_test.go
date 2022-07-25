@@ -24,9 +24,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/consensus/hotstuff"
+	"github.com/Switcheo/Zion/crypto"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -234,10 +234,10 @@ func testStickyProposer(t *testing.T) {
 func TestFAndQ(t *testing.T) {
 	n := 13
 
-	for i := 1; i<=n; i++ {
+	for i := 1; i <= n; i++ {
 		list := make([]common.Address, 0)
-		for j := 0; j < i; j ++ {
-			list = append(list, common.HexToAddress(fmt.Sprintf("0x%d", j + 1)))
+		for j := 0; j < i; j++ {
+			list = append(list, common.HexToAddress(fmt.Sprintf("0x%d", j+1)))
 		}
 		vs := newDefaultSet(list, hotstuff.RoundRobin)
 		faultySize := vs.F()

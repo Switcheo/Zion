@@ -20,9 +20,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	eth2 "github.com/ethereum/go-ethereum/contracts/native/cross_chain_manager/eth"
-	cmanager "github.com/ethereum/go-ethereum/contracts/native/governance/side_chain_manager"
-	"github.com/ethereum/go-ethereum/contracts/native/header_sync/eth/types"
+	eth2 "github.com/Switcheo/Zion/contracts/native/cross_chain_manager/eth"
+	cmanager "github.com/Switcheo/Zion/contracts/native/governance/side_chain_manager"
+	"github.com/Switcheo/Zion/contracts/native/header_sync/eth/types"
 )
 
 func verifyFromQuorumTx(proof, extra []byte, hdr *types.Header, sideChain *cmanager.SideChain) error {

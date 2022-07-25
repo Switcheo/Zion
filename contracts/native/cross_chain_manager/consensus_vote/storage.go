@@ -20,11 +20,11 @@ package consensus_vote
 
 import (
 	"errors"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/contracts/native/utils"
+	"github.com/Switcheo/Zion/core/state"
+	"github.com/Switcheo/Zion/rlp"
 )
 
 var ErrEof = errors.New("EOF")
@@ -64,7 +64,7 @@ func storeSignerAndCheckQuorum(s *native.NativeContract, hash common.Hash, signe
 		if err.Error() == ErrEof.Error() {
 			data = &SignerList{
 				StartHeight: height,
-				SignerList:   make([]*SignerInfo, 0),
+				SignerList:  make([]*SignerInfo, 0),
 			}
 		} else {
 			return false, err

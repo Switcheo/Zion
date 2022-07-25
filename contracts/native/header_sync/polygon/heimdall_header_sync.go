@@ -22,15 +22,15 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/contracts/native/governance/node_manager"
+	hscommon "github.com/Switcheo/Zion/contracts/native/header_sync/common"
+	polygonTypes "github.com/Switcheo/Zion/contracts/native/header_sync/polygon/types"
+	polygonCmn "github.com/Switcheo/Zion/contracts/native/header_sync/polygon/types/common"
+	"github.com/Switcheo/Zion/contracts/native/utils"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/rlp"
 	"github.com/cosmos/cosmos-sdk/store/rootmulti"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/node_manager"
-	hscommon "github.com/ethereum/go-ethereum/contracts/native/header_sync/common"
-	polygonTypes "github.com/ethereum/go-ethereum/contracts/native/header_sync/polygon/types"
-	polygonCmn "github.com/ethereum/go-ethereum/contracts/native/header_sync/polygon/types/common"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rlp"
 )
 
 type HeimdallHandler struct {

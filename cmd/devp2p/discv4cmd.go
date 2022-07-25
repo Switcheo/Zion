@@ -22,12 +22,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/cmd/devp2p/internal/v4test"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Switcheo/Zion/cmd/devp2p/internal/v4test"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/crypto"
+	"github.com/Switcheo/Zion/p2p/discover"
+	"github.com/Switcheo/Zion/p2p/enode"
+	"github.com/Switcheo/Zion/params"
 	"gopkg.in/urfave/cli.v1"
 )
 

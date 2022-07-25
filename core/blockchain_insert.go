@@ -19,10 +19,10 @@ package core
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/mclock"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/log"
 )
 
 // insertStats tracks and reports on block insertion.

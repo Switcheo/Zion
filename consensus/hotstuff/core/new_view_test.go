@@ -21,8 +21,8 @@ package core
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/consensus/hotstuff"
-	"github.com/ethereum/go-ethereum/consensus/hotstuff/validator"
+	"github.com/Switcheo/Zion/consensus/hotstuff"
+	"github.com/Switcheo/Zion/consensus/hotstuff/validator"
 	"github.com/stretchr/testify/assert"
 )
 

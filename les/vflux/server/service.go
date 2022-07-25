@@ -22,11 +22,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/les/utils"
-	"github.com/ethereum/go-ethereum/les/vflux"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/les/utils"
+	"github.com/Switcheo/Zion/les/vflux"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/p2p/enode"
+	"github.com/Switcheo/Zion/rlp"
 )
 
 type (

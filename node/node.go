@@ -26,13 +26,13 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/Switcheo/Zion/accounts"
+	"github.com/Switcheo/Zion/core/rawdb"
+	"github.com/Switcheo/Zion/ethdb"
+	"github.com/Switcheo/Zion/event"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/p2p"
+	"github.com/Switcheo/Zion/rpc"
 	"github.com/prometheus/tsdb/fileutil"
 )
 

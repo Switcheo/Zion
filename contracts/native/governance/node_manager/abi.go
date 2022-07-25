@@ -22,12 +22,12 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	. "github.com/ethereum/go-ethereum/contracts/native/go_abi/node_manager_abi"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/accounts/abi"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/contracts/native"
+	. "github.com/Switcheo/Zion/contracts/native/go_abi/node_manager_abi"
+	"github.com/Switcheo/Zion/contracts/native/utils"
+	"github.com/Switcheo/Zion/rlp"
 )
 
 const contractName = "node manager"

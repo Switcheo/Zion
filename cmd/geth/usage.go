@@ -22,9 +22,9 @@ import (
 	"io"
 	"sort"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/internal/debug"
-	"github.com/ethereum/go-ethereum/internal/flags"
+	"github.com/Switcheo/Zion/cmd/utils"
+	"github.com/Switcheo/Zion/internal/debug"
+	"github.com/Switcheo/Zion/internal/flags"
 	"gopkg.in/urfave/cli.v1"
 )
 

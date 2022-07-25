@@ -26,9 +26,9 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p/enr"
+	"github.com/Switcheo/Zion/common/math"
+	"github.com/Switcheo/Zion/crypto"
+	"github.com/Switcheo/Zion/p2p/enr"
 )
 
 var (
@@ -102,7 +102,7 @@ func NewV4(pubkey *ecdsa.PublicKey, ip net.IP, tcp, udp int) *Node {
 }
 
 func CopyUrlv4(rawurl string, ip net.IP, tcp, udp int) (*Node, error) {
-	var id               *ecdsa.PublicKey
+	var id *ecdsa.PublicKey
 
 	u, err := url.Parse(rawurl)
 	if err != nil {

@@ -22,15 +22,15 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/Switcheo/Zion/contracts/native"
+	scom "github.com/Switcheo/Zion/contracts/native/cross_chain_manager/common"
+	"github.com/Switcheo/Zion/contracts/native/governance/side_chain_manager"
+	"github.com/Switcheo/Zion/contracts/native/header_sync/zilliqa"
+	"github.com/Switcheo/Zion/contracts/native/utils"
+	"github.com/Switcheo/Zion/crypto"
 	"github.com/Zilliqa/gozilliqa-sdk/core"
 	"github.com/Zilliqa/gozilliqa-sdk/mpt"
 	"github.com/Zilliqa/gozilliqa-sdk/util"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	scom "github.com/ethereum/go-ethereum/contracts/native/cross_chain_manager/common"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/side_chain_manager"
-	"github.com/ethereum/go-ethereum/contracts/native/header_sync/zilliqa"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
-	"github.com/ethereum/go-ethereum/crypto"
 )
 
 // Handler ...

@@ -19,7 +19,7 @@
 package core
 
 import (
-	"github.com/ethereum/go-ethereum/consensus/hotstuff"
+	"github.com/Switcheo/Zion/consensus/hotstuff"
 )
 
 func (c *core) handlePrepareVote(data *hotstuff.Message, src hotstuff.Validator) error {

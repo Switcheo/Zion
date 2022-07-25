@@ -19,13 +19,13 @@ package relayer_manager
 
 import (
 	"fmt"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/rlp"
 	"io"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/native/go_abi/relayer_manager_abi"
+	"github.com/Switcheo/Zion/accounts/abi"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/contracts/native/go_abi/relayer_manager_abi"
 )
 
 var (

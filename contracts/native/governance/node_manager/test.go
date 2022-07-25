@@ -21,10 +21,10 @@ package node_manager
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/crypto"
 )
 
 // GenerateTestPeer ONLY used for testing

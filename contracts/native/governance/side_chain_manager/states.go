@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"io"
 
-	ethcomm "github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/rlp"
+	ethcomm "github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/rlp"
 )
 
 type SideChain struct {

@@ -20,13 +20,13 @@ package consensus
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/core/state"
+	"github.com/Switcheo/Zion/core/types"
+	"github.com/Switcheo/Zion/event"
+	"github.com/Switcheo/Zion/p2p"
+	"github.com/Switcheo/Zion/params"
+	"github.com/Switcheo/Zion/rpc"
 )
 
 // ChainHeaderReader defines a small collection of methods needed to access the local
@@ -174,7 +174,7 @@ type Handler interface {
 	SubscribeRequest(ch chan<- types.Block) event.Subscription
 
 	// SubscribeNodes event subscribe for listening static nodes in eth handler
-	SubscribeNodes(ch chan <- StaticNodesEvent) event.Subscription
+	SubscribeNodes(ch chan<- StaticNodesEvent) event.Subscription
 }
 
 // PoW is a consensus engine based on proof-of-work.

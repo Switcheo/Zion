@@ -25,10 +25,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/core/forkid"
-	"github.com/ethereum/go-ethereum/p2p/enr"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/core/forkid"
+	"github.com/Switcheo/Zion/p2p/enr"
+	"github.com/Switcheo/Zion/params"
+	"github.com/Switcheo/Zion/rlp"
 	"gopkg.in/urfave/cli.v1"
 )
 

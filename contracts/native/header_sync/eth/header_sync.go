@@ -26,17 +26,17 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/contracts/native"
-	"github.com/ethereum/go-ethereum/contracts/native/governance/node_manager"
-	scom "github.com/ethereum/go-ethereum/contracts/native/header_sync/common"
-	"github.com/ethereum/go-ethereum/contracts/native/utils"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/Switcheo/Zion/common"
+	"github.com/Switcheo/Zion/common/hexutil"
+	"github.com/Switcheo/Zion/consensus"
+	"github.com/Switcheo/Zion/contracts/native"
+	"github.com/Switcheo/Zion/contracts/native/governance/node_manager"
+	scom "github.com/Switcheo/Zion/contracts/native/header_sync/common"
+	"github.com/Switcheo/Zion/contracts/native/utils"
+	"github.com/Switcheo/Zion/crypto"
+	"github.com/Switcheo/Zion/log"
+	"github.com/Switcheo/Zion/params"
+	"github.com/Switcheo/Zion/rlp"
 	"golang.org/x/crypto/sha3"
 )
 
@@ -130,7 +130,7 @@ func (this *ETHHandler) SyncBlockHeader(native *native.NativeContract) error {
 		}
 		parentHeaderHash := parentHeader.Hash()
 		/**
-		this code source refer to https://github.com/ethereum/go-ethereum/blob/master/consensus/ethash/consensus.go
+		this code source refer to https://github.com/Switcheo/Zion/blob/master/consensus/ethash/consensus.go
 		verify header need to verify:
 		1. parent hash
 		2. extra size
